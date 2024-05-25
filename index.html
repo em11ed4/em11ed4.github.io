@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dzień Matki</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #e91e63;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            display: none;
+            padding: 20px 0;
+        }
+        .section.active {
+            display: block;
+        }
+        h1 {
+            color: #e91e63;
+        }
+        .poem {
+            margin: 20px 0;
+            padding: 10px;
+            border-left: 5px solid #e91e63;
+            background: #fce4ec;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #555;
+        }
+        .flower {
+            width: 100%;
+            max-width: 400px;
+            margin: 20px auto;
+        }
+    </style>
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <a href="#" onclick="showSection('home')">Strona Główna</a>
+        <a href="#" onclick="showSection('edytka')">Od Edytki</a>
+        <a href="#" onclick="showSection('emilka')">Od Emilki</a>
+    </nav>
+    <div class="container">
+        <div id="home" class="section active">
+            <h1>Wszystkiego Najlepszego z Okazji Dnia Matki!</h1>
+            <img src="https://pieknetapety.pl/img/products/16/29/4/1_max.jpg" alt="Kwiaty" class="flower">
+        </div>
+        <div id="edytka" class="section">
+            <h2>Wierszyk od Edytki</h2>
+            <img src="https://example.com/edytka.jpg" alt="Obrazek Edytki" class="flower">
+            <div class="poem">
+                <p>Mamusiu ukochana,</p>
+                <p>dla Ciebie dziś mam życzenia.</p>
+                <p>Byś zawsze była uśmiechnięta,</p>
+                <p>i na co dzień szczęściem przepełniona.</p>
+            </div>
+        </div>
+        <div id="emilka" class="section">
+            <h2>Wierszyk od Emilki</h2>
+            <img src="https://example.com/emilka.jpg" alt="Obrazek Emilki" class="flower">
+            <div class="poem">
+                <p>Droga Mamo, z serca całego,</p>
+                <p>życzę Ci dnia pięknego.</p>
+                <p>Niech radość i miłość w Tobie płynie,</p>
+                <p>dziś, jutro i w każdej godzinie.</p>
+            </div>
+        </div>
+        <div class="footer">
+            <p>&copy; 2024 Dzień Matki - Edytka i Emilka</p>
+        </div>
+    </div>
+</body>
+</html>
